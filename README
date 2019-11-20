@@ -30,7 +30,7 @@ Filelist
   Files for git to ignore
 
 .ICEauthority
-  Basically ICE is a inter process communication
+  "Basically ICE is a inter process communication
   protocol, with authentication, protocol negotiation 
   and potentially multiplexing built in.
 
@@ -49,11 +49,15 @@ Filelist
   In a lot of ways it's similar to the xauth program
   the .Xauthority file, except that .ICEAuthority is
   used for client to client, while .Xauthority is for
-  client to server.
+  client to server."
 
   what is .ICEAuthority file in opensuse 11.2
   Serverfault
   https://serverfault.com/questions/119580/what-is-iceauthority-file-in-opensuse-11-2
+
+.ssh/
+  Openssh security certificates and such.
+  NOTE: Authentication, do not commit to git.
 
 .Xauthority
   "The .Xauthority (not .xAuthority) file can be found in
