@@ -6,6 +6,7 @@
 #
 .gitignore
 .ICEauthority
+.ssh/
 .Xauthority
 bin/
 cruft/
