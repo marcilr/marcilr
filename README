@@ -1,0 +1,41 @@
+README
+Created Fri 08 Nov 2019 11:20:04 AM AKST
+by Raymond E. Marcil <marcilr@gmail.com>
+
+
+For ssh checkout need crypto keys:
+
+
+$ git clone ssh://github.com/marcilr/bin bin
+Cloning into 'bin'...
+Warning: Permanently added the RSA host key for \
+IP address '192.30.255.112' to the list of known hosts.
+marcilr@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+$ 
+
+
+
+Filelist
+========
+.bashrc
+  ~/.bashrc: executed by bash(1) for non-login shells.
+  see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+  for examples
+
+bin/
+  Binaries
+  Initial checkout:
+  $ git clone https://github.com/marcilr/bin bin
+  Cloning into 'bin'...
+  remote: Enumerating objects: 27, done.
+  remote: Counting objects: 100% (27/27), done.
+  remote: Compressing objects: 100% (17/17), done.
+  remote: Total 111 (delta 16), reused 21 (delta 10), pack-reused 84
+  Receiving objects: 100% (111/111), 188.11 KiB | 183.00 KiB/s, done.
+  Resolving deltas: 100% (55/55), done.
+  $ 
+
