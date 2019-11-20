@@ -26,6 +26,9 @@ Filelist
   see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
   for examples
 
+.gitignore
+  Files for git to ignore
+
 bin/
   Binaries
   Initial checkout:
