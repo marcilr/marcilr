@@ -42,11 +42,18 @@ Filelist
   As Richard Holloway says, the .ICEAuthority file is 
   for authentication.  It contains a number of random 
   cookies.  If two programs have the same cookie, then 
-  they're allowed to talk to each other. In practice this either means that they're reading the same .ICEAuthority file, or the cookies have been added.
+  they're allowed to talk to each other.  In practice
+  this either means that they're reading the same
+  .ICEAuthority file, or the cookies have been added.
 
-In a lot of ways it's similar to the xauth program & the .Xauthority file, except that .ICEAuthority is used for client to client, while .Xauthority is for client to server.
+  In a lot of ways it's similar to the xauth program
+  the .Xauthority file, except that .ICEAuthority is
+  used for client to client, while .Xauthority is for
+  client to server.
 
-https://serverfault.com/questions/119580/what-is-iceauthority-file-in-opensuse-11-2
+  what is .ICEAuthority file in opensuse 11.2
+  Serverfault
+  https://serverfault.com/questions/119580/what-is-iceauthority-file-in-opensuse-11-2
 
 bin/
   Binaries
