@@ -5,6 +5,8 @@
 # Files for git to ignore
 #
 .gitignore
+.ICEauthority
+.Xauthority
 bin/
 cruft/
 git/
