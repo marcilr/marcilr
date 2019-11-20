@@ -5,3 +5,4 @@
 # Files for git to ignore
 #
 .gitignore
+cruft/
