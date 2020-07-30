@@ -10,5 +10,8 @@
 .Xauthority
 bin/
 cruft/
+Documents/
+Downloads/
 git/
+Music/
 Pictures/
