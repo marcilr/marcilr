@@ -7,11 +7,30 @@
 #
 # Links
 # =====
+# Customizing Git - Git Configuration
+# https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+#
 # git-config - Get and set repository or global options
 # https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorstatusltslotgt
 #
-
+# How to colorize git-status output?
+# https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
+#
+#
 [user]
 # Please adapt and uncomment the following lines:
 	name = Raymond Marcil
 	email = marcilr@gmail.com
+
+#
+# Updated colors for better visibility under 'git status'.
+# The red on black for new files was impossible to see.
+#
+# Used:
+#   git config color.status.changed blue
+#   git config color.status.untracked green
+#
+# Syntax from:
+#   How to colorize git-status output?
+#   https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
+#
