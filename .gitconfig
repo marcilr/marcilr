@@ -1,0 +1,17 @@
+# .gitconfig
+# Created Tue 12 Nov 2019 01:21:58 PM AKDT
+# Updated Thu 30 Jul 2020 01:21:58 PM AKDT
+#
+# This is Git's per-user configuration file.
+#
+#
+# Links
+# =====
+# git-config - Get and set repository or global options
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-colorstatusltslotgt
+#
+
+[user]
+# Please adapt and uncomment the following lines:
+	name = Raymond Marcil
+	email = marcilr@gmail.com
