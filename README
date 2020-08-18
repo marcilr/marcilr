@@ -60,6 +60,9 @@ Filelist
   Serverfault
   https://serverfault.com/questions/119580/what-is-iceauthority-file-in-opensuse-11-2
 
+.nanorc
+   nano text editor configuration
+
 .profile
   ~/.profile: executed by the command interpreter for login shells.
   This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
