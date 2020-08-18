@@ -1,0 +1,54 @@
+# .nanorc
+# Created Mon 17 Aug 2020 05:05:46 PM AKDT
+# nano configuration
+#
+# Links
+# =====
+# Configuring Nano Text Editor with nanorc
+# 2 years agoby Shahriar Shovon
+# Code And Text Editors • Nano
+# https://linuxhint.com/configure_nano_text_editor_nanorc/#:~:text=You%20can%20change%20the%20title,or%20%2Fetc%2Fnanorc%20file.&text=For%20example%2C%20let's%20say%2C%20you,etc%2Fnanorc%20file%20should%20be.
+#
+# Configuring the nano text editor
+# http://www.linuxhowtos.org/System/config_nano.htm
+#
+# Legal colors for foreground and background
+# color are: white, black, red, blue, green,
+# yellow, magenta, and cyan. You may use the
+# prefix "bright" to force a stronger color
+# highlight for the foreground. If your
+# terminal supports transparency, not
+# specifying a bgcolor tells nano to attempt
+# to use a transparent background.
+# --nanorc - GNU nano
+#   https://www.nano-editor.org/dist/v2.0/nanorc.5.html
+#
+
+# This did not seem to work:
+#set foregroundColorCode white
+#set backgroundColorCode black
+
+# Color Syntax Highlighting
+#
+# Legible:
+#   brightblue
+#   birghtyellow
+#
+# Non-legigle:
+#   blue
+#   yellow
+#
+# Links
+# =====
+# Configuring the nano text editor
+# http://www.linuxhowtos.org/System/config_nano.htm
+#
+
+#
+# LaTeX colors
+#
+syntax "TeX" "\.tex$"
+#color brightgreen "%%.*"
+color brightblue "%%.*"
+#color brightyellow "%%.*"
+
