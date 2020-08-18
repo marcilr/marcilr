@@ -4,6 +4,8 @@
 #
 # Files for git to ignore
 #
+.bash_history
+.bash_logout
 .gitignore
 .ICEauthority
 .ssh/
