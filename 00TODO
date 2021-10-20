@@ -1,0 +1,79 @@
+00TODO
+Created Wed 20 Oct 2021 09:38:00 AM AKDT
+Copyright (C) 2021 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+TODO items
+
+
+Disability application deadline is 24th, i.e. Sunday
+
+
+Wed 20 Oct 2021 09:45:39 AM AKDT
+================================
+o Get with appointment with Dr. Hale tomorrow morning to sign
+disability form and get records.
+
+
+o Disable Mozilla Firefox v78.15.0esr (64-bit) 
+from prompting to save passwords:
+
+1. Open Firefox option on toolbar:
+click on the icon with three stacked horizontal lines to the 
+      top right of the address bar.
+
+2. Open Preferences
+click Prefences
+===> about:preferences
+
+3. Open Privacy & Security
+click Privacy & Security
+===> about:preferences#privacy
+
+4. Under Logins and Passwords uncheck:
+
+Ask to save logins and password for websites
+  Autofill logins and password
+  Suggest and generate strong passwords
+  Sow alerts about passwords for breached websites
+
+Looks good!
+
+
+o Set Mozilla Firefox v78.15.0esr (64-bit) home to google.com:
+1. Open Preferences:
+about:preferences#home
+
+Set:
+
+Homepage and new windows: 
+  Custom URLS...
+  https://www.google.com
+
+New tabs: Blank Page
+
+click Home icon now opens:
+  https://www.google.com
+
+Very nice.
+
+
+Links
+=====
+Here's how to stop Chrome from asking to save passwords.
+    Click the Settings icon.
+    Select Settings.
+    Click Show advanced settings.
+    Under Passwords and forms, uncheck the box next to 
+   "Offer to save your web passwords."
+   Jan 21, 2017
+How to Stop Chrome From Asking to Save Passwords
+https://www.laptopmag.com/articles/disable-chrome-passwords
+
+Stop Firefox from asking to save passwords
+All Replies (7) Type about:preferences#security<enter> in the address bar. 
+Under Logins, Turn off Remember Logins.
+To check the passwords you have 
+listed, press Saved Logins. Apr 27, 2017
+--How to permanantly disable the save password feature in firefox?
+  https://support.mozilla.org/en-US/questions/1158069
