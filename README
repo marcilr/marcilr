@@ -3,6 +3,88 @@ Created Fri 08 Nov 2019 11:20:04 AM AKST
 by Raymond E. Marcil <marcilr@gmail.com>
 
 
+
+Fri 10 Dec 2021 10:39:02 AM AKST
+================================
+o Under gmail created new Kara Stocker label, For Dr. Kara Stocker,
+and moved all her messages to it
+
+9:30-10:30AM Zoom meeting with Dr. Stocker with plenty of discussion on 
+my decline and how I should be using CPAP.  Agreed to use it then do
+testing after a year...
+
+
+Fri 03 Dec 2021 12:20:22 PM AKST
+================================
+Scribus sounds promising:
+scribus - Open Source Desktop Page Layout - stable branch
+scribus-data - Open Source Desktop Page Layout - stable branch (data files)
+scribus-dev - Open Source Desktop Page Layout - stable branch (development files)
+scribus-template - additional scribus templates
+
+@thejoshwolfe I highly recommend trying out Scribus instead of 
+LibreOffice Draw.  I had the same issue where LibreOffice was 
+mangling the imported PDF so that it did not look like the 
+original anymore.  I tried importing the original into Scribus
+ and it worked perfectly. – wheeler
+Jan 13 at 17:30
+--How can I add text and images (for example, a signature) to a PDF?
+Asked 9 years, 11 months ago, Active 5 months agom Viewed 44k times
+https://askubuntu.com/questions/87419/how-can-i-add-text-and-images-for-example-a-signature-to-a-pdf
+
+$ sudo aptitude install scribus scribus-data scribus-dev scribus-template
+This installed Scribus 1.4.8 Open Source Desktop Publishing software
+
+Scribus fails to open:
+~/git/disability/concentra/pdf/Records_Release-20211203.pdf
+
+
+Found PDFEdit has dependency issues:
+o Build pdfedit-0.4.5:
+
+Expand PDFedit tarball:
+$ cd /usr/local/src
+$ tar jxvpf 00TARBALLS/pdfedit/pdfedit-0.4.5.tar.bz2
+
+
+Create freetype-config (dependency) symlink to /usr/bin/pkg-config:
+$ cd ~/bin
+~/bin$ ln -s /usr/bin/pkg-config freetype-config
+--Configure unable to find FreeType2 library when compiling SDL2 TTF Library
+Tue Aug 13, 2019 12:53 pm
+https://forums.raspberrypi.com/viewtopic.php?t=248691
+
+o Set QTDIR environment variable to alleviate:
+$ cd /usr/local/src/pdfedit-0.4.5
+$ ./configure --prefix=/usr/local
+...
+configure: error: QTDIR environment variable must be set
+
+Thinks that pdfedit-0.4.5 is dated...
+
+
+
+
+o "Document Viewer (Evince) SHOULD be able to fill in forms, IF the 
+document is a fillable form.  Not all documents are fillable! 
+If document does not support form filling the form, you should 
+use tools like PDFedit or OpenOffice Draw"
+--Is there software that can fill PDF forms?
+Asked 10 years, 9 months ago, Active today, Viewed 185k times
+https://askubuntu.com/questions/29230/is-there-software-that-can-fill-pdf-forms
+
+NOTE: Evince does not work on:
+~/git/disability/concentra/pdf/Records_Release-20211203.pdf
+
+OpenOffice Draw might work but obnoxious application
+PDFedit 
+
+Trying out okular universal document viewer that I have installed.
+
+
+
+Fri 08 Nov 2019 11:20:04 AM AKST
+================================
 For ssh checkout need crypto keys:
 
 
