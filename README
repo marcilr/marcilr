@@ -14,8 +14,7 @@ git/vehicle-crash-report/pdf/100156826.pdf
 
 It worked great!
 
-Need to purchase for $69 from:
-  ???
+Need to purchase for $69 from: ???
 
 
 Fri 10 Dec 2021 10:39:02 AM AKST
@@ -75,8 +74,6 @@ $ ./configure --prefix=/usr/local
 configure: error: QTDIR environment variable must be set
 
 Thinks that pdfedit-0.4.5 is dated...
-
-
 
 
 o "Document Viewer (Evince) SHOULD be able to fill in forms, IF the 
@@ -212,3 +209,5 @@ git/
 index.html
   Base page for home directory 
 
+manifest
+  Manifest file for use by resync script
