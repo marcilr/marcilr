@@ -4,6 +4,7 @@
 #
 # Files for git to ignore
 #
+.adobe
 .bash_history
 .bash_logout
 .cache
