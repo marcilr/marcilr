@@ -21,16 +21,5 @@
 # Please adapt and uncomment the following lines:
 	name = Raymond Marcil
 	email = marcilr@gmail.com
-
-#
-# Updated colors for better visibility under 'git status'.
-# The red on black for new files was impossible to see.
-#
-# Used:
-#   git config color.status.changed blue
-#   git config color.status.untracked green
-#
-# Syntax from:
-#   How to colorize git-status output?
-#   https://stackoverflow.com/questions/12795790/how-to-colorize-git-status-output
-#
+[color]
+	ui = true
