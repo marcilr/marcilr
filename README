@@ -123,6 +123,12 @@ Filelist
   see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
   for examples
 
+.config/
+  The ~/.config directory stores user-specific configuration files.
+  --Environment variables
+    XDG Base Directory Specification
+    https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
 .gitconfig
   This is Git's per-user configuration file.
   --git-config - Get and set repository or global options
