@@ -44,3 +44,6 @@ fi
 /usr/bin/git config --global color.ui true
 /usr/bin/git config color.status.changed "blue normal bold"
 /usr/bin/git config color.status.untracked "green normal bold"
+
+# Add github ssh key for access to github
+/usr/bin/ssh-add /home/marcilr/.ssh/github_rsa
