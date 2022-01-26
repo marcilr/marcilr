@@ -7,11 +7,19 @@
 # for examples
 #
 
+#
+# Thu 30 Jul 2020 04:40:26 PM AKDT
+# This was failing, hence commented out:
+#
+# $ ~/.bashrc
+# /home/marcilr/.bashrc: line 13: return: can only `return' from a function or sourced script
+# $
+#
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+#case $- in
+#    *i*) ;;
+#      *) return;;
+#esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -122,3 +130,20 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+#
+# Colorize git status output for filenames
+#
+# Was having a real hard time read untracked filenames,
+# that were red on black, in 'git status' output.
+#
+# Setting colors in ~/.gitconfig or ~/.git/config
+# had no affect.
+#
+# Links
+# =====
+# [SOLVED] How to Color Git using Ubuntu Terminal?
+# https://www.zyxware.com/articles/5736/solved-how-to-color-git-using-ubuntu-terminal
+#
+/usr/bin/git config --global color.ui true
+/usr/bin/git config color.status.changed "blue normal bold"
+/usr/bin/git config color.status.untracked "green normal bold"
