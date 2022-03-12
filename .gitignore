@@ -33,6 +33,7 @@
 .xournal/
 .xsession-errors
 .xsession-errors.old
+00TARBALLS/
 bin/
 cruft/
 Documents/
