@@ -221,3 +221,7 @@ index.html
 
 manifest
   Manifest file for use by resync script
+
+packages.txt
+  Debian Bullsye package maintenance and tracking
+
