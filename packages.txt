@@ -1,0 +1,322 @@
+packages.txt
+Created Sun 01 Nov 2020 04:47:54 PM AKST
+Copyright (C) 2020 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+
+Debian packages
+
+
+How to disable:
+  "Enter password to unlock your login keyring
+
+  The login keyring did not get unlocked when you 
+  logged into your computer/
+
+  Password"
+
+  Cancal    Unlock"
+
+  Need to get rid of this obnoxious prompting.
+
+1. Install seahorse
+# aptitude install seahorse
+
+2. Run seahorse
+
+3. Right-click on “Login” and select “Change Password.”
+
+4. Enter the old password when you see the pop-up.
+Then leave the new password field blank.  Don’t enter even space.
+Click ‘Continue’.
+
+5. You should see an obvious warning pop-up that passwords will 
+be unencrypted. Click ‘Continue’.
+
+That’s it! Restart your computer for the setting to take effect. 
+Next time you launch Chrome or Chromium browser, you should not 
+see the keyring request.
+
+
+seahorse - GNOME front end for GnuPG, installed Sun 01 Nov 2020
+  --How to disable keyring in Ubuntu, elementary OS, and Linux Mint
+    Keyring pops up everytime after reboot. Want to stop it?
+    https://www.fosslinux.com/2561/how-to-disable-keyring-in-ubuntu-elementary-os-and-linux-mint.htm
+
+
+Wed 06 Apr 2022 09:48:12 AM AKDT
+================================
+
+Remove firefox-esr in favor of google chrome:
+
+$ dpkg -l | grep chrome
+ii  chrome-gnome-shell     10.1-5            all     GNOME Shell extensions integration for web browsers
+ii  google-chrome-stable   100.0.4896.75-1   amd64   The web browser from Google
+$
+
+$ sudo aptitude remove firefox-esr 
+The following packages will be REMOVED:  
+  firefox-esr 
+0 packages upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
+Need to get 0 B of archives. After unpacking 215 MB will be freed.
+The following packages have unmet dependencies:
+ libreoffice-help-ca : Depends: firefox-esr but it is not going to be installed or
+                                epiphany-browser but it is not going to be installed or
+                                konqueror but it is not going to be installed or
+                                chromium but it is not going to be installed or
+                                firefox which is a virtual package and is not provided by any available package
+...
+ libreoffice-help-en-us : Depends: firefox-esr but it is not going to be installed or
+                                   epiphany-browser but it is not going to be installed or
+                                   konqueror but it is not going to be installed or
+                                   chromium but it is not going to be installed or
+                                   firefox which is a virtual package and is not provided by any available package
+
+The following actions will resolve these dependencies:
+
+     Install the following packages:                         
+1)     epiphany-browser [3.32.1.2-3~deb10u1 (oldstable)]     
+2)     epiphany-browser-data [3.32.1.2-3~deb10u1 (oldstable)]
+
+
+
+Accept this solution? [Y/n/q/?] Y
+The following NEW packages will be installed:
+  epiphany-browser{a} epiphany-browser-data{a} 
+The following packages will be REMOVED:
+  firefox-esr 
+0 packages upgraded, 2 newly installed, 1 to remove and 0 not upgraded.
+Need to get 4,985 kB of archives. After unpacking 201 MB will be freed.
+Do you want to continue? [Y/n/?] Y
+Get: 1 http://deb.debian.org/debian buster/main amd64 epiphany-browser-data all 3.32.1.2-3~deb10u1 [3,254 kB]
+Get: 2 http://deb.debian.org/debian buster/main amd64 epiphany-browser amd64 3.32.1.2-3~deb10u1 [1,731 kB]
+Fetched 4,985 kB in 1s (6,867 kB/s)     
+Selecting previously unselected package epiphany-browser-data.
+(Reading database ... 384008 files and directories currently installed.)
+Preparing to unpack .../epiphany-browser-data_3.32.1.2-3~deb10u1_all.deb ...
+Unpacking epiphany-browser-data (3.32.1.2-3~deb10u1) ...
+Selecting previously unselected package epiphany-browser.
+Preparing to unpack .../epiphany-browser_3.32.1.2-3~deb10u1_amd64.deb ...
+Unpacking epiphany-browser (3.32.1.2-3~deb10u1) ...
+...
+(Reading database ... 384522 files and directories currently installed.)
+Removing firefox-esr (91.8.0esr-1~deb10u1) ...
+Removing 'diversion of /usr/bin/firefox to /usr/bin/firefox.real by firefox-esr'
+Setting up epiphany-browser-data (3.32.1.2-3~deb10u1) ...
+Processing triggers for man-db (2.8.5-2) ...
+Processing triggers for desktop-file-utils (0.23-4) ...
+Processing triggers for mime-support (3.62) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for libglib2.0-0:i386 (2.58.3-2+deb10u3) ...
+Processing triggers for libglib2.0-0:amd64 (2.58.3-2+deb10u3) ...
+Processing triggers for libc-bin (2.28-10+deb10u1) ...
+Setting up epiphany-browser (3.32.1.2-3~deb10u1) ...
+Processing triggers for libc-bin (2.28-10+deb10u1) ...
+$
+
+Remove remaining rc file:
+$ dpkg -l | grep firefox
+rc  firefox-esr   91.8.0esr-1~deb10u1   amd64   Mozilla Firefox web browser - Extended Support Release (ESR)
+$
+
+$ sudo apt-get remove --purge $(dpkg -l | grep "^iU" | awk '{print $2}')
+[sudo] password for marcilr: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+$ 
+
+Still find a bunch of rc files installed:
+
+$ sudo dpkg -l | grep "^rc"
+rc  cryptsetup                    2:2.1.0-5+deb10u2        all     transitional dummy package for cryptsetup-{run,initramfs}
+rc  cryptsetup-initramfs          2:2.1.0-5+deb10u2        all     disk encryption support - initramfs integration
+rc  cryptsetup-run                2:2.1.0-5+deb10u2        amd64   disk encryption support - startup scripts
+rc  firefox-esr                   91.8.0esr-1~deb10u1      amd64   Mozilla Firefox web browser - Extended Support Release (ESR)
+rc  gnome-accessibility-themes    3.28-1                   all     High Contrast GTK+ 2 theme and icons
+rc  hunspell-eu                   0.5.20151110-4           all     Basque (Euskera) dictionary for hunspell
+rc  hunspell-lv                   1.3.0-5                  all     Latvian dictionary for hunspell
+rc  keyutils                      1.6-6                    amd64   Linux Key Management Utilities
+rc  libatk-adaptor:amd64          2.30.0-5                 amd64   AT-SPI 2 toolkit bridge
+rc  light-locker                  1.8.0-3                  amd64   simple screen locker for lightDM display manager
+rc  lightdm                       1.26.0-4                 amd64   simple display manager
+rc  lightdm-gtk-greeter           2.0.6-1                  amd64   simple display manager (GTK+ greeter)
+rc  linux-image-4.19.0-10-amd64   4.19.132-1               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-11-amd64   4.19.146-1               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-12-amd64   4.19.152-1               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-13-amd64   4.19.160-2               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-14-amd64   4.19.171-2               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-16-amd64   4.19.181-1               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-17-amd64   4.19.194-3               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-18-amd64   4.19.208-1               amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-8-amd64    4.19.98-1+deb10u1        amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  linux-image-4.19.0-9-amd64    4.19.118-2+deb10u1       amd64   Linux 4.19 for 64-bit PCs (signed)
+rc  live-tools                    1:20171207               all     Live System Extra Components
+rc  myspell-et                    1:20030606-30            all     Estonian dictionary for MySpell
+rc  orca                          3.30.1-1                 all     Scriptable screen reader
+rc  samba                         2:4.9.5+dfsg-5+deb10u1   amd64   SMB/CIFS file, print, and login server for Unix
+rc  speech-dispatcher             0.9.0-5                  amd64   Common interface to speech synthesizers
+rc  user-setup                    1.81                     all     Set up initial user and password
+rc  xbrlapi                       5.6-10                   amd64   Access software for a blind person using a braille display - xbrlapi
+rc  xscreensaver                  5.42+dfsg1-1             amd64   Screensaver daemon and frontend for X11
+rc  xscreensaver-data             5.42+dfsg1-1             amd64   Screen saver modules for screensaver frontends
+$
+
+To remove broken packages any of two commands will help:
+
+$ sudo apt-get -f install
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+$
+
+$ sudo apt-get remove --purge $(dpkg -l | grep "^iU" | awk '{print $2}')
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+$
+
+The above did not work:
+$ sudo dpkg -l | grep "^rc"
+rc  cryptsetup                               2:2.1.0-5+deb10u2                            all          transitional dummy package for cryptsetup-{run,initramfs}
+rc  cryptsetup-initramfs                     2:2.1.0-5+deb10u2                            all          disk encryption support - initramfs integration
+rc  cryptsetup-run                           2:2.1.0-5+deb10u2                            amd64        disk encryption support - startup scripts
+...
+rc  xscreensaver-data                        5.42+dfsg1-1                                 amd64        Screen saver modules for screensaver frontends
+$ 
+
+
+To remove all residual packages:
+
+$ sudo apt-get remove --purge $(dpkg -l | grep "^rc" | awk '{print $2}')
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  cryptsetup* cryptsetup-initramfs* cryptsetup-run* firefox-esr* gnome-accessibility-themes* hunspell-eu* hunspell-lv* keyutils* libatk-adaptor* light-locker* lightdm* lightdm-gtk-greeter*
+  linux-image-4.19.0-10-amd64* linux-image-4.19.0-11-amd64* linux-image-4.19.0-12-amd64* linux-image-4.19.0-13-amd64* linux-image-4.19.0-14-amd64* linux-image-4.19.0-16-amd64* linux-image-4.19.0-17-amd64*
+  linux-image-4.19.0-18-amd64* linux-image-4.19.0-8-amd64* linux-image-4.19.0-9-amd64* live-tools* myspell-et* orca* samba* speech-dispatcher* user-setup* xbrlapi* xscreensaver* xscreensaver-data*
+0 upgraded, 0 newly installed, 31 to remove and 0 not upgraded.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+(Reading database ... 384420 files and directories currently installed.)
+Purging configuration files for linux-image-4.19.0-16-amd64 (4.19.181-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-16-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-16-amd64, directory '/lib/modules/4.19.0-16-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-9-amd64 (4.19.118-2+deb10u1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-9-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-9-amd64, directory '/lib/modules/4.19.0-9-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-10-amd64 (4.19.132-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-10-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-10-amd64, directory '/lib/modules/4.19.0-10-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-18-amd64 (4.19.208-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-18-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-18-amd64, directory '/lib/modules/4.19.0-18-amd64' not empty so not removed
+Purging configuration files for xscreensaver-data (5.42+dfsg1-1) ...
+Purging configuration files for cryptsetup (2:2.1.0-5+deb10u2) ...
+Purging configuration files for linux-image-4.19.0-11-amd64 (4.19.146-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-11-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-11-amd64, directory '/lib/modules/4.19.0-11-amd64' not empty so not removed
+Purging configuration files for xbrlapi (5.6-10) ...
+Purging configuration files for speech-dispatcher (0.9.0-5) ...
+Purging configuration files for linux-image-4.19.0-17-amd64 (4.19.194-3) ...
+rmdir: failed to remove '/lib/modules/4.19.0-17-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-17-amd64, directory '/lib/modules/4.19.0-17-amd64' not empty so not removed
+Purging configuration files for gnome-accessibility-themes (3.28-1) ...
+Purging configuration files for light-locker (1.8.0-3) ...
+Purging configuration files for cryptsetup-run (2:2.1.0-5+deb10u2) ...
+Purging configuration files for linux-image-4.19.0-8-amd64 (4.19.98-1+deb10u1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-8-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-8-amd64, directory '/lib/modules/4.19.0-8-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-12-amd64 (4.19.152-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-12-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-12-amd64, directory '/lib/modules/4.19.0-12-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-13-amd64 (4.19.160-2) ...
+rmdir: failed to remove '/lib/modules/4.19.0-13-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-13-amd64, directory '/lib/modules/4.19.0-13-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-14-amd64 (4.19.171-2) ...
+rmdir: failed to remove '/lib/modules/4.19.0-14-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-11-amd64, directory '/lib/modules/4.19.0-11-amd64' not empty so not removed
+Purging configuration files for xbrlapi (5.6-10) ...
+Purging configuration files for speech-dispatcher (0.9.0-5) ...
+Purging configuration files for linux-image-4.19.0-17-amd64 (4.19.194-3) ...
+rmdir: failed to remove '/lib/modules/4.19.0-17-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-17-amd64, directory '/lib/modules/4.19.0-17-amd64' not empty so not removed
+Purging configuration files for gnome-accessibility-themes (3.28-1) ...
+Purging configuration files for light-locker (1.8.0-3) ...
+Purging configuration files for cryptsetup-run (2:2.1.0-5+deb10u2) ...
+Purging configuration files for linux-image-4.19.0-8-amd64 (4.19.98-1+deb10u1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-8-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-8-amd64, directory '/lib/modules/4.19.0-8-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-12-amd64 (4.19.152-1) ...
+rmdir: failed to remove '/lib/modules/4.19.0-12-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-12-amd64, directory '/lib/modules/4.19.0-12-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-13-amd64 (4.19.160-2) ...
+rmdir: failed to remove '/lib/modules/4.19.0-13-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-13-amd64, directory '/lib/modules/4.19.0-13-amd64' not empty so not removed
+Purging configuration files for linux-image-4.19.0-14-amd64 (4.19.171-2) ...
+rmdir: failed to remove '/lib/modules/4.19.0-14-amd64': Directory not empty
+dpkg: warning: while removing linux-image-4.19.0-14-amd64, directory '/lib/modules/4.19.0-14-amd64' not empty so not removed
+Purging configuration files for live-tools (1:20171207) ...
+Purging configuration files for keyutils (1.6-6) ...
+Purging configuration files for xscreensaver (5.42+dfsg1-1) ...
+Purging configuration files for hunspell-lv (1.3.0-5) ...
+Purging configuration files for orca (3.30.1-1) ...
+Purging configuration files for user-setup (1.81) ...
+Purging configuration files for lightdm-gtk-greeter (2.0.6-1) ...
+Purging configuration files for firefox-esr (91.8.0esr-1~deb10u1) ...
+Purging configuration files for cryptsetup-initramfs (2:2.1.0-5+deb10u2) ...
+Purging configuration files for hunspell-eu (0.5.20151110-4) ...
+Purging configuration files for myspell-et (1:20030606-30) ...
+Purging configuration files for samba (2:4.9.5+dfsg-5+deb10u1) ...
+Purging configuration files for libatk-adaptor:amd64 (2.30.0-5) ...
+Purging configuration files for lightdm (1.26.0-4) ...
+Removing user `lightdm' ...
+Warning: group `lightdm' has no more members.
+Done.
+Processing triggers for dbus (1.12.20-0+deb10u1) ...
+Processing triggers for systemd (241-7~deb10u8) ...
+$ 
+
+$ dpkg -l | grep "^rc" | awk '{print $2}'
+
+The dpkg -l command did remove all the rc packages successfully.
+
+--dpkg -l syntax from:
+How to remove all "rc" - residual packages using command line at once?
+Asked 8 years, 5 months ago, Modified 12 months ago, Viewed 38k times
+
+https://askubuntu.com/questions/365965/how-to-remove-all-rc-residual-packages-using-command-line-at-once
+
+Looks good.
+
+firefox-esr removed and ephiphany installed:
+
+
+
+
+Removed firefox-esr package
+$ sudo aptitude remove firefox-esr
+[sudo] password for marcilr: ***
+...
+This failed to remove firefox-esr
+...
+$
+
+Removed firefox-esr-l10n-* packages one at a time then
+was able to remove primary firefox-esr package:
+
+$ dpkg -l | grep firefox
+ii  firefox-esr            91.8.0esr-1~deb10u1   amd64   Mozilla Firefox web browser - Extended Support Release (ESR)
+ii  firefox-esr-l10n-ar    91.8.0esr-1~deb10u1   all     Arabic language package for Firefox ESR
+ii  firefox-esr-l10n-ast   91.8.0esr-1~deb10u1   all     Asturian language package for Firefox ESR
+ii  firefox-esr-l10n-be    91.8.0esr-1~deb10u1   al      Belarusian language package for Firefox ESR
+...
+$
+
+$ dpkg -l | grep firefox
+ii  firefox-esr   91.8.0esr-1~deb10u1   amd64   Mozilla Firefox web browser \
+- Extended Support Release (ESR)
