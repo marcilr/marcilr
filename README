@@ -3,6 +3,31 @@ Created Fri 08 Nov 2019 11:20:04 AM AKST
 by Raymond E. Marcil <marcilr@gmail.com>
 
 
+Mon 09 May 2022 06:45:08 PM AKDT
+================================
+Search gmail for:
+
+Adventure Property Investments, LLC Docs
+
+Hits for Fri, Nov 6, 2015, 7:42 AM
+
+Interesting.
+
+
+Mon 11 Apr 2022 12:15:01 PM AKDT
+================================
+o Created /usr/local/00SCANS/photographing/cover/ with:
+back-cover.png
+front-cover.png
+spline.png
+
+o Created /usr/local/00SCANS/ directory as target for local target.
+$ cd /usr/local
+$ sudo mkdir 00SCANS
+$ sudo chown marcilr:marcilr 00SCANS/
+$ chmod 755 00SCANS/
+
+
 
 Tue 28 Dec 2021 05:59:38 PM AKST
 ================================
