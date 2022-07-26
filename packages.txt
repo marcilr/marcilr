@@ -44,9 +44,15 @@ seahorse - GNOME front end for GnuPG, installed Sun 01 Nov 2020
     https://www.fosslinux.com/2561/how-to-disable-keyring-in-ubuntu-elementary-os-and-linux-mint.htm
 
 
+Tue 26 Jul 2022 10:52:18 AM AKDT
+================================
+Installed gnuplot:
+
+gnuplot - Command-line driven interactive plotting program.
+
+
 Wed 06 Apr 2022 09:48:12 AM AKDT
 ================================
-
 Remove firefox-esr in favor of google chrome:
 
 $ dpkg -l | grep chrome
