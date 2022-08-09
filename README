@@ -2,6 +2,84 @@ README
 Created Fri 08 Nov 2019 11:20:04 AM AKST
 by Raymond E. Marcil <marcilr@gmail.com>
 
+  Tue Jun 28, 2022
+
+
+Tue 09 Aug 2022 07:23:47 AM AKDT
+================================
+Voicemail from Greg with Mike Mechanical just got
+back to town yesterday.  Call or text to:
+441-0907
+
+(Referred to me as Mark)
+
+
+Mon 11 Jul 2022 10:13:54 PM AKDT
+================================
+List debian rc packages:
+$ sudo dpkg -l | grep "^rc"
+
+Remove rc packages individually using:
+$ sudo apt-get purge name
+
+Did this for all stray wine packages.
+
+
+Fri 08 Jul 2022 09:54:59 AM AKDT
+================================
+Pretty cool:
+
+Jade
+https://books.google.com/books?id=NTbSBwAAQBAJ&printsec=frontcover
+
+
+Wed 06 Jul 2022 11:30:28 AM AKDT
+================================
+Put another 25 message for $40 on akusa card for 25 credits on
+Local BangClub.
+
+Did not clear.  Trying 10 messages at $17.50
+This did not clear either.
+
+Oh well...
+
+
+Wed 29 Jun 2022 02:41:23 PM AKDT
+================================ 
+o Shena says I should we need coconut aminos
+o Office and person handling my SSA application?
+   
+
+Local BangClub
+https://localbangclub.com/messages/inbox
+Tue Jun 28, 2022
+
+PTS Primo Charts
+https://www.ptsprimocharts.com/
+
+ecret_for_mex reached out, are you interested, marcilr?
+LocalBangClub
+Under gmail Jun 27, 2022, 1:41 PM (2 days ago)
+Tue Jun 28, 2022
+
+Specifying the Path to a File or Directory
+All of the following entries are valid references to a file 
+called MyFile.txt in a user’s Documents directory:
+
+Path-based URL: file://localhost/Users/steve/Documents/MyFile.txt
+File reference URL: file:///.file/id=6571367.2773272/
+String-based path: /Users/steve/Documents/MyFile.txt
+
+Accessing Files and Directories
+File System Programming Guide
+https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/AccessingFilesandDirectories/AccessingFilesandDirectories.html
+
+Used Path-based URL in:
+file:///home/marcilr/Desktop/disability/index.html#20220628
+
+to reference:
+file://localhost/home/marcilr/git/medical/pdf/peak-neurology-payment-20220628.pdf
+
 
 Mon 09 May 2022 06:45:08 PM AKDT
 ================================
