@@ -6,20 +6,17 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 #
-
 #
-# Thu 30 Jul 2020 04:40:26 PM AKDT
-# This was failing, hence commented out:
+# Links
+# =====
+# Difference Between .bashrc, .bash-profile, and .profile
+# Last modified: February 28, 2021
+# by baeldung
+# https://www.baeldung.com/linux/bashrc-vs-bash-profile-vs-profile
 #
-# $ ~/.bashrc
-# /home/marcilr/.bashrc: line 13: return: can only `return' from a function or sourced script
-# $
+# Go environment variables
+# https://pkg.go.dev/cmd/go#hdr-GOPATH_environment_variable
 #
-# If not running interactively, don't do anything
-#case $- in
-#    *i*) ;;
-#      *) return;;
-#esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -85,10 +82,13 @@ xterm*|rxvt*)
     ;;
 esac
 
+#
 # enable color support of ls and also add handy aliases
+# -p to add trailing slash to directories
+#
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+    alias ls='ls -p --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
@@ -129,6 +129,69 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+#
+# Set GOROOT and GOPATH
+#
+# "GOPATH is a variable that defines the root of your workspace.
+# By default, the workspace directory is a directory that is
+# named go within your user home directory (~/go for Linux and
+# MacOS, %USERPROFILE%/go for Windows). GOPATH stores your code
+# base and all the files that are necessary for your development.
+# You can use another directory as your workspace by configuring
+# GOPATH for different scopes. GOPATH is the root of your
+# workspace and contains the following folders:
+#
+# src/: location of Go source code (for example, .go, .c, .g, .s).
+# pkg/: location of compiled package code (for example, .a).
+# bin/: location of compiled executable programs built by Go."
+# --GOROOT and GOPATH
+# Last modified: 12 December 2022
+# GoLand 2022.3
+# https://www.jetbrains.com/help/go/configuring-goroot-and-gopath.html
+# Added Sun 29 Jan 2023 11:27:26 AM AKST
+#
+if [ -d "/usr/local/go" ] ; then
+    GOROOT=/usr/local/go
+fi
+
+#
+# Set GOPATH
+# "$GOPATH is called as the workspace directory for Go programs.
+# Go source-code, belongs to you and to others lives here.
+# So, when you import a package, Go searches that package inside
+# this directory’s src directory."
+# --Fix your $GOPATH and $GOROOT
+# Inanc Gumus, Sep 27, 2017, 2 min read
+# https://blog.learngoprogramming.com/what-are-goroot-and-gopath-1231b084723f
+#
+if [ -d "${HOME}/go" ] ; then
+    GOPATH=${HOME}/go
+fi
+
+#
+# Set GOROOT
+# Installation directory for go.
+$
+if [ -d "/usr/local/go" ] ; then
+    GOROOT=/usr/local/go
+fi
+
+# Add /usr/local/go/bin to PATH
+if [ -d "/usr/local/go/bin" ] ; then
+    PATH="/usr/local/go/bin:$PATH"
+fi
+
+# Add /home/marcilr/go/bin to PATH
+if [ -d "/home/marcilr/go/bin" ] ; then
+    PATH="/home/marcilr/go/bin:$PATH"
+fi
+
+
+
+
+# Set default browser, used by evince
+BROWSER=/usr/bin/google-chrome
 
 #
 # Colorize git status output for filenames
