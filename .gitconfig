@@ -23,3 +23,5 @@
 	email = marcilr@gmail.com
 [color]
 	ui = true
+[init]
+	defaultBranch = master
