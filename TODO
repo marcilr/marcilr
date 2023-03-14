@@ -5,6 +5,83 @@ Copyright (C) 2021 by Raymond E. Marcil <marcilr@gmail.com>
 
 Items todo
 
+o A Simple Method for Transposing Faceting Angles
+BEGINNER'S INFORMATION - LEARNING TO FACET
+Home » Learning Center » Jewelry and Lapidary » Beginner's Information - Learning to Facet » A Simple Method for Transposing Faceting Angles
+by Dr. Clive Washington
+https://www.gemsociety.org/article/a-simple-method-for-the-transposition-of-faceting-angles/
+Merge to Faceting latex document
+
+o Tue 12 Jul 2022 07:58:00 AM AKDT - how to sign document in adobe reader 9
+Adobe Acrobat 9.0 - How to Digitally Sign your Document
+https://www.youtube.com/watch?v=WtDWOZ_Ga7Y
+
+Need a document on this topic for Adobe Acrobat Reader and evince
+
+o Tue 12 Jul 2022 07:59:03 AM AKDT - Commercial version of 
+Master PDF Editor for Linux
+Master PDF Editor is the optimal solution for editing PDF files in Linux.
+It enables you to create, edit, view, encrypt, sign and print interactive 
+PDF documents.
+https://code-industry.net/free-pdf-editor/
+
+o Master PDF Editor
+Editing Images
+Inserting images to the PDF document
+https://code-industry.net/masterpdfeditor-help/edit-images/#:~:text=Inserting%20images%20to%20the%20PDF%20document&text=Click%20where%20you%20want%20to,%2C%20BMP%2C%20PNG%20and%20PPM.
+NOTE: My version under Debian did not have a working image insert icon.
+
+o How to remove all "rc" - residual packages using command line at once?
+Asked 8 years, 8 months ago, Modified 1 year, 3 months ago. Viewed 40k times
+List rc packages: sudo dpkg -l | grep "^rc"
+Remove individual rc package: sudo apt-get purge name
+How to remove all "rc" - residual packages using command line at once?
+Asked 8 years, 8 months ago, Modified 1 year, 3 months ago, Viewed 40k times
+https://askubuntu.com/questions/365965/how-to-remove-all-rc-residual-packages-using-command-line-at-once
+
+o Master PDF Editor for Linux Download
+Edit PDF documents.
+The best solution for working with PDF files in Linux.
+code industry
+professional software solutions
+https://code-industry.net/free-pdf-editor/#get
+
+o Social Security Office Locator
+Find the Office for this ZIP Code: 99518
+Social Security Office Information
+Address:
+ROOM A11
+222 W 8TH AVE
+ANCHORAGE, AK 99513
+Phone:	1-866-772-3081
+TTY:	1-907-271-4799
+Fax:	1-833-950-2930
+Hours:	
+Monday      9:00 AM - 4:00 PM
+Tuesday     9:00 AM - 4:00 PM
+Wednesday   9:00 AM - 4:00 PM
+Thursday    9:00 AM - 4:00 PM
+Friday      9:00 AM - 4:00 PM
+Saturday    Closed
+Sunday      Closed
+National 800 Number
+Toll-Free: 1-800-772-1213
+https://secure.ssa.gov/ICON/main.jsp#officeResults
+
+o Social Security Forms (nice list)
+https://www.ssa.gov/forms/
+
+
+o Function Report - Adult - Form SSA-3373-BK - Social Security
+Google: social security functionality report form
+https://www.ssa.gov/forms/ssa-3373-bk.pdf
+
+o List of Social Security Administration Field Offices in Alaska
+Has nice table with Social Security Administration Fields Office in Alaska
+Should mirror!
+Alaska and Social Security Disability Benefits
+Citizens Disability
+https://www.citizensdisability.com/state-by-state-information/alaska-and-social-security-disability-benefits/
 
 o Get Providence Behavioral Health records   <===
 o Samsung Galaxy headset ???
